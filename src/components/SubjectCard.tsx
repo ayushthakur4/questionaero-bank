@@ -21,7 +21,7 @@ const SubjectCard = ({ name, code, papers, onClick }: SubjectCardProps) => {
       transition={{ duration: 0.3 }}
     >
       <Card 
-        className="cursor-pointer hover:shadow-lg transition-shadow duration-300 border-sage-200"
+        className="cursor-pointer hover:shadow-lg transition-shadow duration-300 border-sage-200 bg-white/50 backdrop-blur-sm"
         onClick={onClick}
       >
         <CardHeader className="space-y-1">
