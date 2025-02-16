@@ -1,4 +1,3 @@
-
 // Mock data
 const courses = {
     BCA: {
@@ -44,13 +43,27 @@ const searchInput = document.getElementById('searchInput');
 // Initialize Lucide icons
 lucide.createIcons();
 
+// Smooth scroll for hero CTA
+document.querySelector('.hero-cta').addEventListener('click', (e) => {
+    e.preventDefault();
+    const coursesSection = document.querySelector('#courses');
+    coursesSection.scrollIntoView({ behavior: 'smooth' });
+});
+
 // Event Listeners
 backButton.addEventListener('click', handleBack);
 searchInput.addEventListener('input', handleSearch);
 
-// Course selection
+// Course selection with link handling
 document.querySelectorAll('.course-card').forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+        // If clicking on the course link, allow default behavior (navigation)
+        if (e.target.closest('.course-link')) {
+            return;
+        }
+        
+        // Otherwise prevent navigation and show semesters
+        e.preventDefault();
         const course = card.dataset.course;
         showSemesters(course);
     });

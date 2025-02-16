@@ -6,14 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Question Bank</title>
     <link rel="stylesheet" href="/src/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <div class="min-h-screen bg-gradient">
-        <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Gateway to Academic Excellence</h1>
+                <p class="hero-description">Access thousands of previous year question papers from top colleges. Start your preparation journey today.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">2000+</span>
+                        <span class="stat-label">Question Papers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Courses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50k+</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                </div>
+                <a href="#courses" class="hero-cta">
+                    Explore Courses
+                    <i data-lucide="arrow-right" class="cta-icon"></i>
+                </a>
+            </div>
+            <div class="hero-pattern"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container" id="courses">
             <div class="header fade-in">
-                <h1>College Question Bank</h1>
+                <h2>Question Bank Directory</h2>
                 <p>Access previous year question papers for all courses and semesters</p>
             </div>
 
@@ -30,16 +58,24 @@
             </div>
 
             <div id="courseSelection" class="course-grid">
-                <div class="course-card" data-course="BCA">
+                <a href="https://example.com/bca" class="course-card" data-course="BCA">
                     <i data-lucide="book" class="course-icon"></i>
                     <h2>BCA</h2>
                     <p>Bachelor of Computer Applications</p>
-                </div>
-                <div class="course-card" data-course="MCA">
+                    <span class="course-link">
+                        <i data-lucide="external-link" class="link-icon"></i>
+                        View Course Details
+                    </span>
+                </a>
+                <a href="https://example.com/mca" class="course-card" data-course="MCA">
                     <i data-lucide="graduation-cap" class="course-icon"></i>
                     <h2>MCA</h2>
                     <p>Master of Computer Applications</p>
-                </div>
+                    <span class="course-link">
+                        <i data-lucide="external-link" class="link-icon"></i>
+                        View Course Details
+                    </span>
+                </a>
             </div>
 
             <div id="semesterGrid" class="semester-grid hidden"></div>
