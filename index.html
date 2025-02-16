@@ -1,18 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>questionaero-bank</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Question Bank</title>
+    <link rel="stylesheet" href="/src/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient">
+        <div class="container">
+            <div class="header fade-in">
+                <h1>College Question Bank</h1>
+                <p>Access previous year question papers for all courses and semesters</p>
+            </div>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+            <div class="search-container">
+                <div class="search-bar">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search across all courses..." id="searchInput">
+                </div>
+            </div>
+
+            <div id="backButton" class="back-button hidden">
+                <i data-lucide="chevron-left"></i>
+                <span>Back</span>
+            </div>
+
+            <div id="courseSelection" class="course-grid">
+                <div class="course-card" data-course="BCA">
+                    <i data-lucide="book" class="course-icon"></i>
+                    <h2>BCA</h2>
+                    <p>Bachelor of Computer Applications</p>
+                </div>
+                <div class="course-card" data-course="MCA">
+                    <i data-lucide="graduation-cap" class="course-icon"></i>
+                    <h2>MCA</h2>
+                    <p>Master of Computer Applications</p>
+                </div>
+            </div>
+
+            <div id="semesterGrid" class="semester-grid hidden"></div>
+            <div id="subjectGrid" class="subject-grid hidden"></div>
+        </div>
+    </div>
+    <script src="/src/app.js"></script>
+</body>
 </html>
